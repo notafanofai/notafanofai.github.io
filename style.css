@@ -94,6 +94,9 @@ nav a:hover {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 50px;
+  outline: 1.5px solid #9e0000;
+  outline-offset: 0.08in;
 }
 
 .eyebrow,
