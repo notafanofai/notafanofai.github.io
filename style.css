@@ -80,23 +80,33 @@ nav a:hover {
 
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 36%);
+  grid-template-columns: minmax(0, 1fr) minmax(145px, 36%);
   align-items: center;
   gap: clamp(1.5rem, 4vw, 3.5rem);
   padding: clamp(4.5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 6rem);
+  container-type: inline-size;
 }
 
 .intro-copy {
   min-width: 0;
 }
 
-.intro-photo {
+.photo-frame {
   display: block;
   width: 100%;
-  height: auto;
+  height: calc(25.55cqw + 0.5in);
+  overflow: hidden;
   border-radius: 50px;
   outline: 1.5px solid #9e0000;
   outline-offset: 0.08in;
+}
+
+.intro-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .eyebrow,
@@ -239,8 +249,9 @@ footer {
     font-size: clamp(2rem, 8vw, 3.2rem);
   }
 
-  .intro-photo {
+  .photo-frame {
     max-width: 360px;
+    height: calc(70.97cqw + 0.5in);
   }
 
   nav {
@@ -256,6 +267,12 @@ footer {
 
   .interest-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .photo-frame {
+    height: 303.5px;
   }
 }
 
