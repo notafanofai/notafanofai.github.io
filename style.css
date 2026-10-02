@@ -131,6 +131,7 @@ p {
 h1 {
   max-width: 100%;
   margin-bottom: 0;
+  color: #b30000;
   font-family: 'Meddon', cursive;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 400;
